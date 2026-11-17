@@ -1,13 +1,19 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "projeto-p26-3a-c938-e66f-589c-7fd7",
-  "compatibility_date": "2026-03-01",
-  "pages_build_output_dir": "./public",
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "db-p26-3a-c938-e66f-589c-7fd7",
-      "database_id": "00000000-0000-0000-0000-000000000000"
-    }
-  ]
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "projeto-p26-3a-c938-e66f-589c-7fd7",
+	"compatibility_date": "2026-03-01",
+	"pages_build_output_dir": "./public",
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "db-p26-3a-c938-e66f-589c-7fd7",
+			"database_id": "00ea8529-daae-4d11-b0cc-55254718e902"
+		},
+		{
+			"binding": "Get_Content_wranglerjsonc_replace_00000000_0000_0000_0000_00000000000000ea8529_daae_4d11_b0cc_55254718e902_Set_Content_wranglerjsonc",
+			"database_name": "db-p26-3a-c938-e66f-589c-7fd7",
+			"database_id": "00ea8529-daae-4d11-b0cc-55254718e902",
+			"remote": true
+		}
+	]
 }
