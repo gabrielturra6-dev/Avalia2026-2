@@ -1,0 +1,28 @@
+:root{--deep:#0b2a3d;--sea:#14506b;--foam:#d6ebef;--flare:#e4572e;--hit:#e4572e;--ship:#8fa9b5;--bg:#f3f7f8;--ink:#0b2a3d}
+@media(prefers-color-scheme:dark){:root{--bg:#071a26;--ink:#d6ebef;--sea:#0f3a50;--foam:#12465f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Trebuchet MS","Segoe UI",sans-serif;min-height:100vh;display:flex;flex-direction:column}
+header{background:var(--deep);color:#d6ebef;padding:.8rem 1rem;display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+h1{margin:0;font-size:1.4rem;letter-spacing:.02em}h2{font-size:1.1rem;margin:.5rem 0}
+#userbox{display:flex;align-items:center;gap:.6rem}#userbox img{border-radius:50%}
+main{flex:1;max-width:980px;width:100%;margin:0 auto;padding:1rem}
+footer{text-align:center;padding:.8rem;font-size:.85rem;opacity:.75}
+button,.btn{font:inherit;background:var(--deep);color:#fff;border:0;border-radius:4px;padding:.5rem .9rem;cursor:pointer;text-decoration:none;display:inline-block}
+button.ghost{background:transparent;border:1px solid currentColor;color:inherit}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible,.cell:focus-visible,.btn:focus-visible{outline:3px solid var(--flare);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.boards{display:flex;flex-wrap:wrap;gap:1.5rem}
+.grid{--c:min(8.5vw,40px);display:grid;grid-template-columns:repeat(10,var(--c));grid-template-rows:repeat(10,var(--c));gap:2px;background:var(--deep);padding:2px;width:max-content;max-width:100%}
+.grid.small{--c:min(6vw,28px)}
+.cell{background:var(--sea);border:0;padding:0;border-radius:0;position:relative}
+.cell.ship{background:var(--ship)}
+.cell.preview{background:#5fa56b}.cell.bad{background:#a33}
+.cell.water::after{content:"";position:absolute;inset:38%;border-radius:50%;background:var(--foam)}
+.cell.hit{background:var(--hit)}
+.cell.hit::after{content:"✕";color:#fff;position:absolute;inset:0;display:grid;place-items:center;font-weight:700}
+.cell.sunk{background:#5b1d0e}
+#egrid .cell:not(.water):not(.hit):hover{background:#1d7a9e;cursor:crosshair}
+#msg{min-height:1.6em;font-weight:700}#err{color:var(--flare);min-height:1.4em}
+ol{padding-left:1.4rem}
+@media(prefers-reduced-motion:no-preference){.cell{transition:background .15s}}

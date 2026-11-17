@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projeto #3 — P26-3A-C938-E66F-589C-7FD7</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+  <h1>Batalha Naval Tático</h1>
+  <div id="userbox" hidden>
+    <img id="avatar" alt="" width="32" height="32"><span id="uname"></span>
+    <span id="score"></span><button id="logout" class="ghost">Sair</button>
+  </div>
+</header>
+<main>
+  <section id="login" hidden>
+    <p>Entre com o Discord para guardar suas partidas e seu placar.</p>
+    <a class="btn" href="/api/auth/discord">Entrar com Discord</a>
+  </section>
+
+  <section id="place" hidden>
+    <h2>Posicione sua frota</h2>
+    <p id="hint"></p>
+    <div class="row">
+      <button id="rotate">Girar (R): <b id="dir">horizontal</b></button>
+      <button id="random">Sortear posições</button>
+      <button id="reset" class="ghost">Limpar</button>
+      <button id="start" disabled>Iniciar combate</button>
+    </div>
+    <div id="pgrid" class="grid"></div>
+  </section>
+
+  <section id="battle" hidden>
+    <p id="msg" role="status"></p>
+    <div class="boards">
+      <div><h2>Águas inimigas</h2><div id="egrid" class="grid"></div></div>
+      <div><h2>Sua frota</h2><div id="mgrid" class="grid small"></div></div>
+    </div>
+    <button id="again" hidden>Nova partida</button>
+  </section>
+
+  <section id="board">
+    <h2>Melhores comandantes</h2>
+    <ol id="lb"></ol>
+  </section>
+  <p id="err" role="alert"></p>
+</main>
+<footer id="projectFooter">Chave Única de Auditoria: <code>P26-3A-C938-E66F-589C-7FD7</code> · Turma 3A · Licenciado sob MIT</footer>
+<script src="/app.js"></script>
+</body>
+</html>
