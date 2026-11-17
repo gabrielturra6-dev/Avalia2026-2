@@ -4,7 +4,7 @@
 - **Estudante:** gabriel de azevedo
 - **Turma:** 3A
 - **Chave Única:** `P26-3A-C938-E66F-589C-7FD7`
-- **URL_CLOUDFLARE:** `https://p26-3a-c938-e66f-589c-7fd7.pages.dev` *(Atualize com a URL pública real do seu deploy na Cloudflare antes de abrir o Pull Request)*
+- **URL_CLOUDFLARE:** https://p26-3a-c938-e66f-589c-7fd7.pages.dev/
 
 ---
 
